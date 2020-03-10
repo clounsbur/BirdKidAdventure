@@ -1,0 +1,44 @@
+.hidden {
+    display: none;    
+}
+
+.img-container {
+    position: relative;
+    margin: 0px
+}
+
+.img-sky {
+    width: 100%;
+    height: auto;
+    margin:  0;
+
+}
+.img-busstop{ 
+    width:100%;
+    margin: 0;
+    margin-top: -2%;
+}
+.character {
+    position: absolute;
+    left: 80%;
+    width: 35px;
+    height: auto; 
+   }
+
+.highlight-bird {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20% 20% 20% 20%;
+}
+.text-container {
+    position: 'relative';
+}
+.text {
+    top: 25%;
+    position: absolute;
+    
+}
+.background {
+    height: auto;
+    
+}

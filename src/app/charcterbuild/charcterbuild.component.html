@@ -1,0 +1,25 @@
+<div [@display]= "displayText" class = "form-container">
+  <form (ngSubmit)="buildPlayer(form.value.name)" #form="ngForm">
+    <p>It's time to pick a name for BirdKid. Go ahead pick whatever name you love or even one you hate and type it in the box:</p>
+    <label for="name">
+        <input #name="ngModel" (ngModel)="(name)" pattern="[A-Za-z]*" type="text" placeholder="Name" name="name"
+            required></label>
+            <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+            
+          </form>
+</div>        
+<div *ngIf = "show" class = "narration"><p >Hi {{names}} you are officially BirdKid. Welcome to your orgin story, an orgin story is 
+  a simple tale about how a super hero gets their powers. But before we can reveal BirdKid's orgin story, you have to pick a player below.</p>
+</div>
+
+<div *ngIf = 'show' class="img-container">
+  <div
+      class="character"
+      *ngFor="let character of characters; index as i">
+      <img [src]="character.image" 
+      
+      (click)="setPlayer(character)"/>
+      <p> {{character.bio}}
+      </div>
+  </div>
+  <!-- </div> -->

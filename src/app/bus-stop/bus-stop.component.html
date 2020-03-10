@@ -1,0 +1,43 @@
+
+<div class= 'img-container'  
+[ngClass]="{
+ 'hidden' : !isHidden}">
+    <p>{{name}} made it to the bus stop on time. {{name}} thinks the day is getting better but doesn't realize that luck is 
+    about to run out. Click the button to see what happens next!
+    </p>
+    <button (click) = "driveBus()">next</button>
+    <img class="img-sky" src="assets/sky1.png"> 
+    <div class="img-container" [@hightlighted] = "highlight">
+        <img class = 'highlight-bird' src="assets/sm-bird.png" alt="">
+        
+    </div>  
+    <div class = "img-container">
+        <img [@hightlighted] = "poopFall"  class = 'poop' src = "assets/poop.png">
+        <img class="img-busstop" src="assets/busstop1.png">
+        <img [@busStop]= "busDrive"  class= 'img-bus' src="assets/schoolbus2.png" alt="">
+        <img [@busStop] = "fly" src="assets/sm-bird.png">
+   
+    </div>
+    <div class = "img-container">
+        <img class= "character" [src] = "character.image" >
+    </div>
+    <div [@text] = "textAppear" class = 'text-container'>
+    <p class ='text'> {{character.name}} has been pooped on by a mutant bird. Should {{character.pronoun}} go back home and wash up or get on the school bus. 
+    </p></div>
+</div>
+
+
+
+
+
+<!-- <div class="img-container background" [ngClass]="{
+    'hidden' : isHidden}">
+    <img [@birdFly]= "poopFall" src = "assets/poop.png">
+    <img class="img-sky" src="assets/sky2.png">
+    <img [@birdFly]= "birdFly" src="assets/mutantBirdDroppings.png" alt="mutant bird flys through sky and drops green droppings">
+    
+
+
+</div> -->
+
+ 

@@ -1,0 +1,16 @@
+
+
+  <div class="intro">
+      <p>This is {{ name }}.
+        {{this.character.pronoun}}
+           had a rotten no good terrible morning, but {{this.character.pronoun}} would NOT like to talk about it. 
+            {{this.character.pronoun}} just wants to get to the school bus stop on time. If {{this.character.pronoun}} misses the bus again {{this.character.posspronoun}} day will go from 
+            ROTTEN, NO GOOD, and TERRIBLE to ROTTEN, NO GOOD, and HORRIBLE. Click the door to open it for {{ name }}.  
+      </p>
+      <div class = 'img-container'>
+        <img class = 'character' [src]="character.image">
+        <img class = 'door' src="assets/rainbow-door.png" (click)="nextButton()">
+      </div>
+  </div>
+
+ 

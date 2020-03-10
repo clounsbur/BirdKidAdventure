@@ -1,0 +1,20 @@
+
+.img-container{
+    position:relative;
+    height: 50vh;
+}
+.character {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 3%;
+    bottom: -42%;
+
+}
+.door {
+    position: absolute;
+    width: 80%;
+    left: 29%;
+    top: 15%;
+
+}
