@@ -1,20 +1,24 @@
-
-.img-container{
+.intro {
+    font-family: 'Kalam', cursive;
+    border-bottom: double black;
+    height:90vh;
     position:relative;
-    height: 50vh;
+}
+.intro p {
+    margin: 2% 2% 0% 2%;
+    padding: 0px;
 }
 .character {
     position: absolute;
-    width: 40%;
-    height: auto;
-    left: 3%;
-    bottom: -42%;
-
+    height: 55%;
+    left: 12%;
+    bottom: -9%;
 }
 .door {
     position: absolute;
-    width: 80%;
-    left: 29%;
-    top: 15%;
-
+    width: 61%;
+    left: 43%;
+    bottom: -2%;
+    margin: 0;
+    padding: 0;
 }

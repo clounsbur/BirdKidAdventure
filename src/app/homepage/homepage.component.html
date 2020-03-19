@@ -1,3 +1,34 @@
+<div class="banner">
+    <h1>An Adventure Kid Series
+    </h1>    
+</div>
+<div class="episode">
+    <h2> episode 1: "The Orgin Story"</h2>
+    </div> 
+<div class="title"> 
+    <h1>BirdKid</h1>  
+</div>
+
+
+<div class = "form-container">
+    <img [@form] = "dimPlayer"   class="img-nonbi" src="assets/nonbi-sm.png" alt="">
+    <img [@form] = "dimPlayer" class="img-boy" src="assets/boy-sm.png" alt="">
+    <img [@form] = "dimPlayer" class="img-girl" src="assets/girl-sm.png" alt="">
+    
+    <button [@form] = "!formView" (click) = "showForm()">Start</button>
+    <form [@form] = "formView" (ngSubmit)="buildPlayer(form.value.name)" #form="ngForm">
+      <p>It's time to pick a name for BirdKid. Go ahead pick whatever name you love, or even one you hate, and type it in the box:</p>
+      <label for="name">
+          <input #name="ngModel" (ngModel)="(name)" pattern="[A-Za-z]*" type="text" placeholder="Name" name="name"
+              required></label>
+              <button>Go</button>
+              
+            </form>
+  </div>
+
+
+
+
 <!-- <div class="form-container">
 
 <img src="/assets/homepagebird.jpg" alt="fantasy bird illustration">

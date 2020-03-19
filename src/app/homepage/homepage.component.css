@@ -1,65 +1,133 @@
-.form-container {
+:host {
+  position: relative;
+  
  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    background-color: black
-  }
-
-  label {
-    padding: 2%;
-    color: #cecece;
-     
-    /* text-shadow: 2px 2px white; */
-    width: 50%;
-    text-align: center;
-    font-family: "Notable", sans-serif;
-    letter-spacing: 3px;
-    font-size: 2vw;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-  }
-  
-  input {
-    margin-top: 5%;
-    margin-bottom: 2%;
-    border-radius: 20px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 1%;
-    align-self: center;
-    width: 50%;
-    letter-spacing: 3px;
-    font-size: 1.5vw;
-  }
-
-
-
-img {
-  width: 50%;
-  height: auto;
 }
-button {
-    background-color: #a00100;
-    color: white;
-    border: 4px solid black;
-    border-radius: 10px;
-    font-size: 2.5vw;
-    margin-top: 2%;
-    width: 50%;
-    font-family: "Notable", sans-serif;
-    letter-spacing: 10px;
-    text-shadow: 2px 2px black;
-    transition: transform 0.2s;
-  }
+.banner{
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 96%; 
+  height: auto; 
+  padding: 2%;
+  text-align: center;
+  background-color: #DF2136;
+}
+.banner h1 {
+  font-family: lato;
+  font-size: 4vw;
+  z-index: 2;
+}
+.episode{
+  font-family: 'Kalam', cursive;
+  border-bottom: 1px double black;
+  width: 96%; 
+  height: auto; 
+  padding: 2%;
+  text-align: center;
+  background-color: rgba(247, 141, 159, 0.884)  ;
+
+}
+.title {
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  background-color: rgba(247, 141, 159, 0.884)  ;
+  align-items: center;
+  justify-content: center;
+}
+.title h1 {
+  /* font-family: 'Kalam', cursive; */
+  font-size: 5.25em;
+  font-family: 'BioRhyme', serif;
   
-  button:hover {
-    transform: scale(1.1);
-  }
+ }
+
+
+.img-boy {
+  position:absolute; 
+  right: 0%;
+  z-index: -4;
+  top: 11%;
+  height: 45%;
+}
+.img-girl {
+  position:absolute; 
+  z-index: -1;
+  top: 10%;
+  height: 45%;
+  
+}
+.img-nonbi {
+  position: absolute;
+  left: 0%;
+  z-index: -2;
+  top: 11%;
+  height: 45%;
+}
+.form-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Kalam', bold;
+  background-color: rgba(247, 141, 159, 0.884);
+  z-index: 1;
+  position: relative;
+}
+p {  
+width: 101%;
+margin-top: 2%;
+letter-spacing: 2px;
+font-size: 4vw;
+font-weight: 800;
+text-align: center;
+}
+label {
+  padding: 2%;
+  color: rgb(36, 44, 43);
+  width: 90%;
+  text-align: center;
+ 
+  letter-spacing: 3px;
+  font-size: 4vw;
+} 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+input {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 2%;
+  align-self: center;
+  width: 25%;
+  letter-spacing: 3px;
+  font-size:3vw;
+}
+
+
+
+button {
+  background-color: white ;
+  color: black;
+  border: 4px solid black;
+  border-radius: 20px;
+  font-size: 3vw;
+  margin-top: 3%;
+  width: 50%;
+  font-family: "Notable", sans-serif;
+  letter-spacing: 10px;
+  padding: 2%;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}

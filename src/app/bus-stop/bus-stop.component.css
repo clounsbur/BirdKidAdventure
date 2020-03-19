@@ -1,28 +1,55 @@
 .hidden {
     display: none;    
 }
-
+:host{
+    position: relative;
+    margin: 0px;
+}
+.narration{
+    display: flex;
+    justify-content: center;
+}
+.narration p{
+    font-family: 'Kalam', cursive;
+    padding: 1%;
+}
+button {
+        background-color: white ;
+        color: black;
+        border: 4px solid black;
+        border-radius: 20px;
+        font-size: 3vw;
+        margin: 3%;
+        width: 50%;
+        font-family: "Notable", sans-serif;
+        letter-spacing: 5px;
+        font-size: 1.2em;
+        padding: 1%;
+        transition: transform 0.2s;
+}
 .img-container {
     position: relative;
-    margin: 0px
+    margin: 0px;
+    font-family: 'Kalam', cursive;
 }
 
 .img-sky {
     width: 100%;
     height: auto;
-    margin:  0;
+    margin: -1% 0 0 0;
+    z-index: -1;
 
 }
 .img-busstop{ 
     width:100%;
     margin: 0;
-    margin-top: -2%;
+    margin-top: -39%;
 }
 .character {
     position: absolute;
     left: 80%;
-    width: 35px;
-    height: auto; 
+    bottom: -36%;
+    height: 44%; 
    }
 
 .highlight-bird {
@@ -31,11 +58,15 @@
     padding: 20% 20% 20% 20%;
 }
 .text-container {
-    position: 'relative';
+    height: 50vh;
+    position: absolute;
+    top: 25%;
+
 }
 .text {
     top: 25%;
     position: absolute;
+    font-family: 'Kalam', cursive;
     
 }
 .background {

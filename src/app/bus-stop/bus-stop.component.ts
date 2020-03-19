@@ -14,14 +14,14 @@ import { trigger, state, style, transition, animation, animate, keyframes } from
     trigger ("busStop", [ 
       state ('drive', style ({  
         position: 'absolute',
-        top: '60%',
+        top: '-40%',
         left: '-55%',
         width: '60%',
         height: 'auto',
       })),
       state ("stop", style ({
         position: 'absolute',
-        top: '60%',
+        top: '-40%',
         left: '48%',
         width: '60%',
         height: 'auto'
@@ -30,20 +30,20 @@ import { trigger, state, style, transition, animation, animate, keyframes } from
         width: '15%',
         position: 'absolute',
         left: '1%',
-        top: '20%'
+        top: '-138%'
       })),
     
       state ('sky', style ({     
         width: '2%',
         position: 'absolute',
         left: '90%',
-        top: '-20%'
+        top: '-250%'
       })),
       transition('tree <=> sky',  
       animate('6s')
 
     ),
-      transition('drive => stop', animate('10s ease-out')
+      transition('drive => stop', animate('9s 2s ease-out')
       ), 
   ]),
 
@@ -55,7 +55,7 @@ import { trigger, state, style, transition, animation, animate, keyframes } from
       backgroundColor: 'white',
       border: '1px solid black',
       left: '35%',
-      top: '25%',
+      top: '27%',
       "z-index": "-1", 
     })),
     state ('on', style ({  
@@ -65,25 +65,25 @@ import { trigger, state, style, transition, animation, animate, keyframes } from
       backgroundColor: 'white',
       border: '1px solid black',
       left: '35%',
-      top: '25%',
+      top: '27%',
       "z-index": "-1" 
     })),
     state ('poop', style ({
       opacity: '0',
       padding: '0 0 0 35%',
-      width: '3%',
+      height: '10%',
       position: 'absolute',
-      top: '0%',
-      left: '35%'
+      top: '-100%',
+      left: '16%'
       })),
     state ('fall', style ({
       'z-index': '4',
       opacity: '1',
       padding: '0 0 0 35%',
-      width: '5%',
+      height: '10%',
       position: 'absolute',
-      left: '50%',
-      top: '92%'
+      left: '47%',
+      top: '82%'
       })),
     transition('poop => fall', animate('2s 3s')),
     transition('off => on', [
@@ -106,13 +106,13 @@ import { trigger, state, style, transition, animation, animate, keyframes } from
   trigger ('text', [ 
     state ('hidden', style ({ 
       opacity: '0',
-      height: '200px',
-      position: 'relative',
+      
+    
     })),
     state ('show', style ({ 
       opacity: '1',
-      position: 'relative',
-      height: '200px',
+      
+      
     })),  
   ]), 
   ],
@@ -129,6 +129,7 @@ export class BusStopComponent implements OnInit {
   fly = 'tree'
   highlight = "off"
   textAppear= 'hidden'
+  displayCharacter:boolean = false;
   constructor(private router: Router, private service: MasterService) { }
 
 
@@ -143,7 +144,8 @@ hightLight(){
 showText() {
   setTimeout (() => {
     this.textAppear = 'show';
- },5000);
+    this.displayCharacter = true
+ },3000);
     
 
     }
@@ -152,6 +154,8 @@ showText() {
       this.fly = 'sky'
       this.hightLight()
       this.showText()
+       
+      
       }  
    
   ngOnInit(): void {
